@@ -1,0 +1,354 @@
+html {
+    --green: #00653A;
+    --yellow: #FDE6AE;
+    --bgclr: #FFFCF5;
+    --black: #323F13;
+    --darkyellow: #FFF3D3;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background: var(--bgclr);
+    color: var(--black);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 1.125em;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.25em;
+    font-weight: bold;
+    max-width: 550px;
+    margin: 25px 0;
+    }
+
+p {
+    font-size: 1.125em;
+    font-weight: 600;
+    max-width: 700px;
+    margin-bottom: 25px;
+}
+
+h3 {
+    margin: 40px 0;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+iframe {
+    margin: 50px auto;
+}
+
+.frame-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.frame-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    border: 0;
+}
+
+.section {
+    padding: 0 100px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#history:target, #tastes:target, #passion:target{
+    padding-top:120px; 
+  }
+
+.width1000 {
+    max-width: 1000px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px; 
+}
+
+.header-container {
+    max-width: 100%;
+    position: fixed;
+    display: flex;
+    height: 100px;
+    z-index: 10;
+}
+    #header {
+        width: 1200px; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--green);
+        padding: 0 100px 0 50px;
+    }
+    #header-img {
+        width: auto;
+        max-height: 90px;
+    }
+    #nav-bar {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        max-width: 500px;
+    }
+    .nav-link {
+        height: 100%;
+        text-align: center;
+        color: var(--yellow);
+        text-decoration: none;
+        font-size: 1.5em;
+        padding: 0 40px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .nav-link:hover {
+        text-decoration: underline;
+    }
+
+#main-img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 90px;
+}
+
+#history-img {
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    padding: 50px 0;
+}
+
+.taste-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.taste-item {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+.item-img, .bottles-div-right-inside img {
+    filter: drop-shadow(0px 0px 5px rgba(8, 48, 9, 0.8));
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(8, 48, 9, 0.8));
+    max-width: 100%;
+}
+
+.tastes p:nth-of-type(1) {
+    max-width: 555px;
+}
+
+.bottles-container {
+    display: flex;
+    max-width: 100%;
+}
+
+    .bottles-div-left {
+        display: flex;
+        flex-direction: column;
+        max-width: 70%;
+        padding-right: 10%;
+    }
+
+    .bottles-div-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+    }
+
+    .bottles-div-right-inside {
+        width: 100%;
+        height: 80%;
+        position: relative;
+    }
+        .bottles-div-right-inside img {
+            position: absolute;
+        }
+
+        .bottles-div-right-inside img:nth-of-type(1) {
+            top: 0%;
+            right: 70%;  
+            width: 30%;
+            z-index: 2;
+            height: auto;
+        }
+        .bottles-div-right-inside img:nth-of-type(2) {
+            top: 10%;
+            right: 45%;
+            width: 30%;
+            z-index: 3;
+            height: auto;
+        }
+        .bottles-div-right-inside img:nth-of-type(3) {
+            top: 0%;
+            right: 20%;
+            width: 30%;
+            z-index: 2;
+            height: auto;
+        }
+        .bottles-div-right-inside img:nth-of-type(4) {
+            top: 10%;
+            right: -5%;
+            width: 30%;
+            z-index: 3;
+            height: auto;
+        }
+
+.form-container {
+    align-self: center;
+    margin: 75px 0;
+}
+
+form {
+    display: flex;   
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    
+}
+input, button {
+    width: 100%;
+    padding: 0.6em;
+    font-size: 1em;
+    margin: 0.25rem auto;
+    border-radius: 5px;
+    border: var(--green) 1px solid;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    background: var(--green);
+    color: var(--bgclr);
+
+}
+
+button:hover {
+    background: var(--yellow);
+    color: var(--black);
+    cursor: pointer;
+}
+
+.quote-container {
+    background: var(--darkyellow);
+    padding: 4% 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.quote-text {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.quote-author {
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+
+
+
+
+@media screen and (max-width: 1000px) and (min-width: 800px) {
+    .bottles-div-left h2 {
+        font-size: 3vw;
+    }
+
+    .bottles-div-left p {
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .taste-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .taste-item {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .nav-link {
+        padding: 0 20px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .bottles-div-left  {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .bottles-div-right {
+        display: none;
+    }
+
+    .section {
+        padding: 0 50px;
+        margin: 40px auto;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+        #header-img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            object-position: left;
+        }
+        #header {
+            padding: 0 20px;
+        }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .quote-text {
+        font-size: 4vw;
+    }
+    .quote-author {
+        font-size: 2vw;
+    }
+}
