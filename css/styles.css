@@ -21,6 +21,10 @@ body {
     box-sizing: border-box;
 }
 
+div, img, p, h1, h2, h3 {
+    transition: all ease 0.4s;
+}
+
 h1 {
     font-size: 1.125em;
     font-weight: bold;
@@ -38,7 +42,6 @@ h2 {
 p {
     font-size: 1.125em;
     font-weight: 600;
-    max-width: 700px;
     margin-bottom: 25px;
 }
 
@@ -62,14 +65,12 @@ iframe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 80%;
+    max-width: 80%;
     height: 80%;
-    border: 0;
 }
 
 .section {
-    padding: 0 100px;
-    margin: 60px auto;
+    padding: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -78,10 +79,6 @@ iframe {
     padding-top:120px; 
   }
 
-.width1000 {
-    max-width: 1000px;
-}
-
 .text-center {
     text-align: center;
 }
@@ -89,59 +86,59 @@ iframe {
 .container {
     margin: 0 auto;
     max-width: 1200px; 
+    display: flex;
+    flex-direction: column;
 }
 
-.header-container {
-    max-width: 100%;
+nav {
+    width: 1200px;
     position: fixed;
     display: flex;
     height: 100px;
     z-index: 10;
+    padding: 0 25px;
+    justify-content: space-between;
+    background: var(--green);
+    align-items: center;
 }
-    #header {
-        width: 1200px; 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: var(--green);
-        padding: 0 100px 0 50px;
-    }
-    #header-img {
-        width: auto;
-        max-height: 90px;
-    }
-    #nav-bar {
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
-        justify-content: center;
-        max-width: 500px;
-    }
-    .nav-link {
-        height: 100%;
-        text-align: center;
-        color: var(--yellow);
-        text-decoration: none;
-        font-size: 1.5em;
-        padding: 0 40px;
-        text-transform: uppercase;
-        font-weight: bold;
-    }
-    .nav-link:hover {
-        text-decoration: underline;
-    }
+
+.nav-link-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav img {
+    width: auto;
+    max-height: 90px;
+}
+
+.nav-link {
+    height: 100%;
+    text-align: center;
+    color: var(--yellow);
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 0 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+ .nav-link:hover {
+    text-decoration: underline;
+}
 
 #main-img {
     max-width: 100%;
     height: auto;
     margin-top: 90px;
+    object-fit: contain;
 }
 
 #history-img {
-    max-width: 500px;
+    max-width: 100%;
     height: auto;
     object-fit: cover;
-    padding: 50px 0;
+    padding: 20px 0;
+    align-self: flex-start;
 }
 
 .taste-container {
@@ -278,9 +275,11 @@ button:hover {
     font-weight: normal;
 }
 
-
-
-
+@media screen and (max-width: 1200px) {
+    nav {
+        width: 100%;
+    }
+}
 
 @media screen and (max-width: 1000px) and (min-width: 800px) {
     .bottles-div-left h2 {
@@ -292,25 +291,27 @@ button:hover {
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
 
-    .taste-container {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 50px;
+    .quote-text {
+        font-size: 4vw;
     }
-
-    .taste-item {
-        width: 100%;
+    .quote-author {
+        font-size: 2vw;
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 900px) {
 
-    .nav-link {
+    nav img {
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+        object-position: left;
+    }
+    nav {
         padding: 0 20px;
     }
-
 }
 
 @media screen and (max-width: 800px) {
@@ -324,31 +325,59 @@ button:hover {
         display: none;
     }
 
-    .section {
+    /* .section {
         padding: 0 50px;
         margin: 40px auto;
+    } */
+}
+
+@media screen and (max-width: 700px) {
+
+    .taste-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .taste-item {
+        width: 100%;
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 650px) {
 
-        #header-img {
-            width: 90px;
-            height: 90px;
-            object-fit: cover;
-            object-position: left;
-        }
-        #header {
-            padding: 0 20px;
-        }
-}
-
-@media screen and (max-width: 1000px) {
-
-    .quote-text {
-        font-size: 4vw;
+    .nav-link {
+        padding: 0 15px;
+        font-size: 1.2em;
     }
-    .quote-author {
-        font-size: 2vw;
+    nav img {
+        width: 50px;
+        height: 50px;
+    }
+    nav {
+        height: 60px;
+    }
+    #main-img {
+        margin-top: 60px;
+    }
+    h2 {
+        font-size: 1.7em;
     }
 }
+
+@media screen and (max-width: 500px) {
+
+    p {
+        font-size: 0.8em;
+        font-weight: 500;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    .nav-link {
+        font-size: 1em;
+    }
+    
+}
+
